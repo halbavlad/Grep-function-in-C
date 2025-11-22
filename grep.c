@@ -35,14 +35,14 @@ int main(int argc, char *argv[]){
     FILE *f1=open_file(argv[1]);
     FILE *f2=open_file(argv[2]);
     char *buffer_f2=(char*)malloc(MAX*sizeof(char));
-    if(!buffer_f2){
+    if(!buffer_f2){ //verificam daca alocarea memoriei a fost realizata cu succes
         perror("Eroare la alocarea memoriei");
         fclose(f1);
         fclose(f2);
         return 1;
     }
     char *buffer_f1=(char*)malloc(MAX*sizeof(char));
-    if(!buffer_f1){
+    if(!buffer_f1){ //verificam daca alocarea memoriei a fost realizata cu succes
         perror("Eroare la alocarea memoriei");
         free(buffer_f2);
         fclose(f1);
